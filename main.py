@@ -1,4 +1,16 @@
 from src.datascience_project import logger
+from src.datascience_project.pipeline.data_ingestion_pipeline import DataIngestionTrainingPipeline
 
 
-logger.info("Welcome to the datascience project")
+STAGE_NAME = "Data Ingestion stage"
+
+logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+
+try:
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.initiate_data_ingestion()
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<")
