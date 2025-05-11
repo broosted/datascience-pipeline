@@ -177,3 +177,57 @@ Source-Age: 0
 
 ]
 [2025-05-10 16:47:33,201: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<]
+[2025-05-10 17:03:25,752: INFO: __init__: Logging has started]
+[2025-05-10 17:04:44,740: INFO: __init__: Logging has started]
+[2025-05-10 17:18:39,402: INFO: __init__: Logging has started]
+[2025-05-10 17:27:19,948: INFO: __init__: Logging has started]
+[2025-05-10 17:27:20,013: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-10 17:27:20,014: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-10 17:27:20,015: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-05-10 17:27:20,016: INFO: common: created directory at: artifacts]
+[2025-05-10 17:27:20,016: INFO: common: created directory at: artifacts/data_validation]
+[2025-05-10 18:21:53,362: INFO: __init__: Logging has started]
+[2025-05-10 18:21:53,509: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-10 18:21:53,510: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-10 18:21:53,510: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-10 18:21:53,511: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-05-10 18:21:53,511: INFO: common: created directory at: artifacts]
+[2025-05-10 18:21:53,511: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-10 18:21:53,511: INFO: data_ingestion: File already exists]
+[2025-05-10 18:21:53,512: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<]
+[2025-05-10 18:21:53,512: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-05-10 18:21:53,513: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-10 18:21:53,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-10 18:21:53,513: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-05-10 18:21:53,513: INFO: common: created directory at: artifacts]
+[2025-05-10 18:21:53,513: INFO: common: created directory at: artifacts/data_validation]
+[2025-05-10 18:21:53,513: ERROR: main: name 'pd' is not defined]
+Traceback (most recent call last):
+  File "/Users/broosted/MLOPS-Course/datascience-pipeline/datascience-pipeline/main.py", line 25, in <module>
+    data_validation.initiate_data_validation()
+  File "/Users/broosted/MLOPS-Course/datascience-pipeline/datascience-pipeline/src/datascience_project/pipeline/data_validation_pipeline.py", line 19, in initiate_data_validation
+    raise e
+  File "/Users/broosted/MLOPS-Course/datascience-pipeline/datascience-pipeline/src/datascience_project/pipeline/data_validation_pipeline.py", line 17, in initiate_data_validation
+    data_validation.validate_all_columns()
+  File "/Users/broosted/MLOPS-Course/datascience-pipeline/datascience-pipeline/src/datascience_project/components/data_validation.py", line 26, in validate_all_columns
+    raise e
+  File "/Users/broosted/MLOPS-Course/datascience-pipeline/datascience-pipeline/src/datascience_project/components/data_validation.py", line 11, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+           ^^
+NameError: name 'pd' is not defined
+[2025-05-10 18:22:25,038: INFO: __init__: Logging has started]
+[2025-05-10 18:22:25,371: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-10 18:22:25,372: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-10 18:22:25,372: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-10 18:22:25,373: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-05-10 18:22:25,373: INFO: common: created directory at: artifacts]
+[2025-05-10 18:22:25,373: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-10 18:22:25,373: INFO: data_ingestion: File already exists]
+[2025-05-10 18:22:25,373: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<]
+[2025-05-10 18:22:25,373: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-05-10 18:22:25,374: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-10 18:22:25,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-10 18:22:25,374: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-05-10 18:22:25,374: INFO: common: created directory at: artifacts]
+[2025-05-10 18:22:25,374: INFO: common: created directory at: artifacts/data_validation]
+[2025-05-10 18:22:25,377: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<]
